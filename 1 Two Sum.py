@@ -5,11 +5,13 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        
+        dict_num = {}
         for i in range(len(nums)):
-            for j in range(len(nums)):
-                if nums[i] + nums[j] == target and i != j:
-                    return [i,j]
+            diff = target - nums[i]
+            if diff in dict_num:
+                return [i, dict_num[diff]]
+            
+            dict_num[nums[i]] = i
         
         return False
     
