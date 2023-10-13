@@ -20,6 +20,7 @@ class Solution(object):
         
         if right - left == 1:
             while count != left:
+                last_poi = poi
                 poi = poi.next
                 count += 1
 
@@ -30,7 +31,7 @@ class Solution(object):
                 head = next_poi
             poi.next = next_poi.next
             next_poi.next = poi
-            last_poi = poi
+            
 
         else:
             node_list = []
