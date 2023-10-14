@@ -4,7 +4,9 @@ class ListNode(object):
         self.val = val
         self.next = next
 
+
 class Solution(object):
+    # Copy from 92. Reverse Linked List II
     def reverseBetween(self, head, left, right):
         """
         :type head: ListNode
@@ -64,6 +66,34 @@ class Solution(object):
         
         return head
 
+    def reverseKGroup(self, head, k):
+        """
+        :type head: ListNode
+        :type k: int
+        :rtype: ListNode
+        """
+        count = 1
+        right_count = 1
+        dummy = ListNode(0,head)
+        pointer = dummy.next
+        left = dummy
+        first_reverse = True
+
+
+        while pointer:
+            if right_count == k:
+                temp = left.next
+                self.reverseBetween(left, 1 + 1, 1 + right_count)
+                right_count = 1
+                left = temp
+                pointer = left.next
+            else:
+                count += 1
+                right_count += 1
+                pointer = pointer.next
+        
+        return dummy.next
+    
 head = ListNode(3)
 cur_poi = head
 cur_poi.next = ListNode(5)
@@ -74,7 +104,5 @@ cur_poi.next = ListNode(4)
 cur_poi = cur_poi.next
 cur_poi.next = ListNode(5)
 cur_poi = cur_poi.next
-left = 1
-right = 2
 obj = Solution()
-print(obj.reverseBetween(head, left, right))
+print(obj.reverseKGroup(head, 2))
