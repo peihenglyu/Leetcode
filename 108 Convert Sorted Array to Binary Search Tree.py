@@ -25,11 +25,7 @@ class Solution(object):
             return node
         else:
             pivot = len(nums)//2
-            node = TreeNode(val = nums[pivot])
-            nums.remove(nums[len(nums)//2])
-            node.left = self.sortedArrayToBST(nums[:pivot])
-            node.right = self.sortedArrayToBST(nums[pivot:])
-            return node
+            return TreeNode(val = nums[pivot], left = self.sortedArrayToBST(nums[:pivot]), right = self.sortedArrayToBST(nums[pivot+1:]))
 
 nums =[3,5,8]
 obj = Solution()
