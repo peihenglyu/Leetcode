@@ -15,7 +15,7 @@ class Solution(object):
                 return mid
 
             if target > nums[mid]:
-                if nums[right] <= nums[mid]:
+                if nums[right] < nums[mid]:
                     left = mid + 1
                 else:
                     if target == nums[right]:
@@ -25,7 +25,7 @@ class Solution(object):
                     else:
                         right = mid - 1
             else:
-                if nums[left] >= nums[mid]:
+                if nums[left] > nums[mid]:
                     right = mid - 1
                 else:
                     if target == nums[left]:
