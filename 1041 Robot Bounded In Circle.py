@@ -13,7 +13,7 @@ class Solution(object):
         # north: 1, east: 2, south: 3, west: 4
         direction = 1
         count = 0
-        while count < 4:
+        while count < 5:
             last_max_x = max_x
             last_min_x = min_x
             last_max_y = max_y
