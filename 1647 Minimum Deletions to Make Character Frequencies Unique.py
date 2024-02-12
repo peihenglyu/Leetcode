@@ -34,9 +34,3 @@ class Solution(object):
                         dict_count[temp] = 1
         
         return dele
-
-
-
-
-
-aaaabbbbcccddeeeerrrrttttyyyy
