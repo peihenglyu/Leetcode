@@ -60,5 +60,5 @@ class Solution(object):
 obj = Solution()
 # print(obj.subarraySum([1],0))
 # print(obj.subarraySum([1,1,1],2))
-print(obj.subarraySum([1,-1,0],0))
-# print(obj.subarraySum([1,2,3],3))
+# print(obj.subarraySum([1,-1,0],0))
+print(obj.subarraySum([1,2,3,1,1,1],3))

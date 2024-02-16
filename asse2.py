@@ -21,4 +21,5 @@ class Solution(object):
 
 obj = Solution()
 print(obj.reverseVowels("hello"))
+print(obj.reverseVowels("aA"))
 print(obj.reverseVowels("leetcode"))
