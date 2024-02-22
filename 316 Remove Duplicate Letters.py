@@ -22,8 +22,14 @@ class Solution(object):
         index = 0
         track_set = set()
         cur_set = set()
+        last_letter = None
         while index < len(s):
             letter = s[index]
+            if last_letter == None:
+                last_letter = letter
+            else:
+                if letter > last_letter:
+                    track_set.add(letter)
             if letter not in pos_dict:
                 output.append(letter)
                 pos_dict[letter] = len(output)-1
