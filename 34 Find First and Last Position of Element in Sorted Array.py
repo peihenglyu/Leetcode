@@ -27,7 +27,7 @@ class Solution(object):
         else:
             output = [left,left]
         
-        while output[0]-1 > 0 and nums[output[0]-1] == target:
+        while output[0]-1 >= 0 and nums[output[0]-1] == target:
             output[0] -= 1
         while output[1]+1 < len(nums) and nums[output[1]+1] == target:
             output[1] += 1
