@@ -46,8 +46,8 @@ class Solution(object):
         
         
 obj = Solution()
-print(obj.longestPalindrome("a"))
-print(obj.longestPalindrome("aa"))
-print(obj.longestPalindrome("ccd"))
+# print(obj.longestPalindrome("a"))
+# print(obj.longestPalindrome("aa"))
+# print(obj.longestPalindrome("ccd"))
 print(obj.longestPalindrome("babad"))
 print(obj.longestPalindrome("cbbd"))
